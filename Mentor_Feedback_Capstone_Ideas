@@ -1,0 +1,27 @@
+Alex,
+
+My thoughts:
+
+First, be a little more explicit about who the customers are and why they’re interested—what sort of decisions they would make based on the analysis.
+
+(1) The Facebook idea is interesting, but we will probably run into a problem with the amount of data and depth of analysis possible. Unless you can find quarterly data, the best case is that you’ll get seven or eight data points (2008 – 2016) for stock price (averages? year-end closings?) vs. purchases of property and equipment and other investments. For statistical purposes, that’s a tiny dataset, and the uncertainty in your estimates will be nearly as large as the estimates themselves, making it impossible to draw clear conclusions.
+
+Another, and more fundamental, problem is methodological. If you only look at investments and find a trend, how will you know that the changes are due to the investments and not some other factor that you haven’t looked at?
+
+A solution would be to look at ten or so companies and use a more complex model. First, we want to identify other factors that are likely to influence stock price, and include them in the model. Then we can see if the model produces better fit—and/or better prediction—with the addition of the investments term. The statistical methods we could use for this first-pass model are within the course material—multiple regression or ANOVA and the cross-correlation function. Graphing will be interesting: we’ll probably need to produce multiple regression plots, or both main effects and interaction plots, or a series of graphs comparing the residual “error” from the model without the investments term and with it (something similar to time series decomposition…figure 6.3 here).
+
+(2) Data is definitely an unknown, here. We’ll have to search to see what is out there. Even if we could only find a database of initial loans and borrower credit ratings, and some listing of the timing of transfers (% of loans transferred at times {x1, x2,…}), we might be able to build a model that predicts similar behavior, even if we couldn’t validate the underlying model. This seems like a good candidate for a machine learning approach, which we could try but would be better done in the Springboard Intensive course.
+
+Here, again, we need to ask: who is the (hypothetical) customer for this analysis, and what is their interest; what decisions do they want to make using this analysis?
+
+(3) We’ll have to look for historical weather data for the region, and the project will depend critically on obtaining visitor information from the casino. Would you be looking at long-term weather effects (e.g. # bookings in sunny months vs rainy months) or in short-term effects, like cancellations based on heat waves or heavy storms? This will impact the sort of data you need. Once again, we need to know who the customer is (the casino? local tourism board?) and why they care.
+
+(4) Again, an interesting project. It’s nice that (most of) the data seems to exist and be available. Like the Facebook project, we need to worry about confirmation bias: if we only seek to confirm the hypothesis, we could miss other important factors. In this case, the obvious one is number of tickets sold by each store. If there were 10,000 stores, but one store sold 99% of the tickets we could expect that store to sell nearly all of the winning tickets, too. This is a general problem with many analyses: population or density effects create an apparent trend. For instance, homicides in Chicago is a perennial topic on political talk shows, but their focus is on the total number. Chicago has a population of 3 million, third largest in the country, so of course they have a lot of murders. These discussions should be focusing on the rate—homicides per capita. Chicago works out to about 28 homicides per 100,000 people. That’s much worse than Los Angeles’ 8/100,000, but still well behind a host of other cities, including Detroit (45), Flint, MI (47), St. Louis, MO (60), Gary, IN (65), Chester, PA (67), and East St. Louis (71).
+
+So the first thing is to normalize the data to rule out the effect of differences in ticket sales. Can we do this? We’ll need to look at the data to find out. Worst-case, I think we would have to use census tract population as a proxy for ticket sales. Are there any other factors that we need to control for? Nothing comes to mind, but you should at least discuss this in your project presentation.
+
+Overall, these look like good projects, and I think all of them are viable and can be done, to some level, within this course. Projects 3 and 4 seem to offer the best opportunity at the moment.
+
+Regards,
+
+Tom
